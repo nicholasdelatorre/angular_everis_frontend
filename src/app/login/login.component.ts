@@ -35,17 +35,14 @@ export class LoginComponent implements OnInit {
 
     // tslint:disable-next-line:prefer-const
     let loginModel = new Login();
-    loginModel.password = this.formulario.password.value;
-    loginModel.login = this.formulario.login.value;
+    loginModel.Password = this.formulario.password.value;
+    loginModel.Login = this.formulario.login.value;
 
     this.authService.login(loginModel)
       .subscribe(data => {
         console.log('usuário logado.');
         this.route.navigateByUrl('/');
-      },
-        error => {
-          alert('Usuário/senha não conferem.');
-        });
+      });
 
   }
 
