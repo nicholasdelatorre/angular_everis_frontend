@@ -1,0 +1,22 @@
+#restrict-msg {
+    background-color: rgba(214, 181, 31, 0.788);
+    width: 100%;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#restrict-msg h6 {
+    padding-top: 5px;
+    color: white;
+}
+
+ul{
+    padding-left: 0px;
+}
+
+li{
+    list-style: none;
+}
+

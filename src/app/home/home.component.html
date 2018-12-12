@@ -1,0 +1,37 @@
+<head>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div id="restrict-msg">
+                <h6>Acesso restrito!</h6>
+            </div>
+          
+            <div *ngIf="filmes.length == 0" class="alert alert-danger" style="width: 100%; text-align: center;">Não há resultado</div>
+      
+            <table *ngIf="filmes.length > 0" class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                    <th>Titulo</th>
+                    <th>Ano de Lançamento</th>
+                    <th>Direção</th>
+                </tr> 
+              </thead>
+              <tbody>
+                <tr *ngFor="let filme of filmes">
+                  <td>{{filme.titulo}}</td>
+                  <td>{{filme.ano}}</td>
+                  <td>
+                    <div *ngIf="filme.diretores.length == 0">Diretor desconhecido</div>
+                    <ul *ngIf="filme.diretores.length > 0">
+                      <li *ngFor="let diretor of filme.diretores">{{diretor.nome}} - {{diretor.sobrenome}}</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>      
+</body>
