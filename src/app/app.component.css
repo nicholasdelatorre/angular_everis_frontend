@@ -1,0 +1,10 @@
+#logout-header {
+    background-color: black;
+    height: 70px;
+    width: 100%;
+}
+
+#logout-header-content {
+    padding: 15px;
+    float: right;
+}
